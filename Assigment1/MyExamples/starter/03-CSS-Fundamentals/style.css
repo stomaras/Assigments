@@ -3,6 +3,83 @@ One CSS RUle
 
 line-height: 15 , means that line-height = (1.5 * font-size)
 */
+
+/*
+Combining Selectors
+List Selector
+*/
+
+/*
+Descendant Selector
+
+In this case will select all p elements which are inside footer elements
+p element is a child element of a footer in our HTML
+Generally we must avoid writing a big and long selector
+*/
+/* footer p {
+  font-size: 16px;
+} */
+
+/*
+id -> we use # in order to select id elements
+there is actually another way of giving elements names, which is by using the class instead of an ID
+The big differences among ID's and classes is that we are not allowed to repeat ID names, or in other words 
+we can only use each ID name only once
+
+So if we need to reuse a name multiple times, then we need to use Classes for that.
+
+id selector -> #
+class selector -> .
+
+if we want to style multiple elements with the same way in css we use class attribute
+class attribute help us prepare for the future and ready for potential changes
+
+Working with colors
+THE RGB MODEL: Every color can be represented by a combination of RED,GREEN and BLUE
+Each of the 3 base colors can take a value between 0 and 255, which leads to 16.8 million different colors
+total RED : R->255, G->0, B->0
+YELLOW : R->255, G->255, B->0
+PINK : R->255, G->0, B->255
+WHITE: R,G,B -> 255
+
+Defining colors in css: 1) RGB NOTATION
+                        2) HEXADECIMAL NOTATION: Instead of using a scale from 0 to 255, we go from 0 to ff(255 in hexadecimal numbers)
+                           if we need transparency we use rgba function
+
+
+SHADES OF GREY : 1) When colors in all 3 channels are the same, we get a grey color
+                 2) There are 256 pure grays to choose from                           
+
+
+element selector = name of the element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+}
+
 h1 {
   color: blue;
   font-size: 26px;
@@ -36,4 +113,76 @@ p {
 li {
   font-family: 20px;
   font-family: sans-serif;
+}
+
+#author {
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related-author {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border: 5px solid #1098ad;
+}
+
+.first-li {
+  font-weight: bold;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(odd) {
+  /* color: red; */
+}
+
+/* Misconception: this won't work */
+article p:first-child {
+  color: red;
+}
+
+/* Styling links */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
 }
