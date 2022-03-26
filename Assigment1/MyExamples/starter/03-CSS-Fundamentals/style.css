@@ -56,21 +56,19 @@ element selector = name of the element
 body element is the parent element of all other elements in our HTML document
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
+* {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -80,6 +78,15 @@ li {
   font-family: sans-serif;
 }
 
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  /* height: 80px; */
+}
+article {
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
 h1 {
   color: blue;
   font-size: 26px;
@@ -95,6 +102,8 @@ h2 {
 h3 {
   font-size: 30px;
   font-family: sans-serif;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -102,6 +111,7 @@ h4 {
   font-family: sans-serif;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 20px;
 }
 
 p {
@@ -113,6 +123,11 @@ p {
 li {
   font-family: 20px;
   font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 #author {
@@ -136,13 +151,16 @@ li {
   list-style: none;
 }
 
-.main-header {
-  background-color: #f7f7f7;
+.post-header {
+  margin-bottom: 50px;
+  position: relative;
 }
 
 aside {
   background-color: #f7f7f7;
   border: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 700px;
 }
 
 .first-li {
@@ -187,6 +205,65 @@ a:active {
   font-style: italic;
 }
 
+ul,
+ol {
+  margin-left: 50px;
+}
+
+.post-img {
+  width: 80%; /* will be always the size of the parent container  80% of size of parent container*/
+  height: auto;
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  bottom: 300px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+p::first-line {
+  color: red;
+}
+
+h3 + p::first-line {
+  color: red;
+}
+h2 {
+  position: relative;
+}
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 650px;
+}
 /* Resolving conflicts
 #copyright {
   color: red;
@@ -202,4 +279,3 @@ a:active {
 
 footer p {
   /* color: green !important; */
-} */
