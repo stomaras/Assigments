@@ -8,6 +8,8 @@
     <style>
       .el--1 {
         background-color: blueviolet;
+        align-self: flex-start;
+        flex-grow: 2;
       }
       .el--2 {
         background-color: orangered;
@@ -42,7 +44,15 @@
         /* FLEXBOX */
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      .el {
+        flex-basis: 100px;
+        flex-grow: 1;
+
+        flex: 1;
       }
     </style>
   </head>
