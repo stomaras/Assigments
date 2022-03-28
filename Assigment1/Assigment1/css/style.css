@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik" sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+.section-hero {
+  background-color: rgb(78, 92, 158);
+  padding: 8.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8.6rem;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: rgb(206, 201, 201);
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+  color: rgb(201, 199, 199);
+}
+
+.mirror-img {
+  width: 100%;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: rgb(133, 175, 180);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600px;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: rgb(134, 187, 189);
+  color: #fff;
+  margin-right: 1.6rem;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: rgb(83, 151, 153);
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.developer {
+  width: 15rem;
+  height: 15rem;
+}
