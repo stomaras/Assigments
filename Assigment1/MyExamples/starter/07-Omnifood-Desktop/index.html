@@ -13,6 +13,15 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
     <title>Omnifood</title>
   </head>
   <body>
@@ -176,6 +185,43 @@
               alt="iPhone"
             />
           </div>
+        </div>
+      </section>
+
+      <section class="section-meals">
+        <div class="container">
+          <span class="subheading">Meals</span>
+          <h2 class="heading-secondary">
+            Omnifood AI chooses from 5,000+ recipes
+          </h2>
+        </div>
+
+        <div class="container grid grid--3-cols">
+          <div class="meal">
+            <img
+              src="content/img/meals/meal-1.jpg"
+              alt="meal 1"
+              class="meal-img"
+            />
+            <span class="tag">Vegeterian</span>
+            <p class="meal-title">Japanese Gyozas</p>
+            <ul class="meal-attributes">
+              <!-- ionicons for icons-->
+              <li class="meal-attribute">
+                <ion-icon name="bandage-outline"></ion-icon
+                ><span>650 calories</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon name="restaurant-outline"></ion-icon>NutriScore &reg;
+                74
+              </li>
+              <li class="meal-attribute">
+                <ion-icon name="cellular-outline"></ion-icon>4.9 rating (537)
+              </li>
+            </ul>
+          </div>
+          <div class="meal">Meals</div>
+          <div class="list">List of diets</div>
         </div>
       </section>
     </main>
