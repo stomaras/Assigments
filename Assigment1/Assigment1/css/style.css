@@ -422,3 +422,34 @@ body {
 .margin-bottom-md {
   margin-bottom: 4.6rem !important;
 }
+
+/******************************************/
+/* TESTIMONIALS SECTION */
+/******************************************/
+
+.section-comments {
+  padding: 9.6rem 0;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.comment-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.comment-text {
+  font-size: 1.8rem;
+  line-height: 1.8; /* This will be multiplier will multiply 1.8 * font-size = line-height  */
+  margin-bottom: 1.6rem;
+}
+
+.comment-name {
+  font-size: 1.6rem;
+  color: #777;
+}
