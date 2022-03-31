@@ -82,6 +82,27 @@
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: rgb(65, 173, 173);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.link:hover,
+.link:active {
+  color: rgb(65, 173, 173);
+  border-bottom: 1px solid transparent;
+}
+
+/* HELPER|SETTINGS CLASS  */
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.center-text {
+  text-align: center;
 }
