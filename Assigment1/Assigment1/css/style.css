@@ -428,7 +428,7 @@ body {
 /******************************************/
 
 .section-comments {
-  background-color: #fdf2e9;
+  background-color: #82b4d4;
   display: grid;
   grid-template-columns: 55fr 45fr;
   align-items: center;
@@ -476,4 +476,48 @@ body {
 
 .gallery-item img:hover {
   transform: scale(1.1);
+}
+
+/******************************************/
+/* PRICING SECTION */
+/******************************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.coding {
+  color: #333;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #82b4d4;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.7rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500; /* span is child of plan-price , so inheriting the font-weight  */
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
