@@ -428,7 +428,10 @@ body {
 /******************************************/
 
 .section-comments {
-  padding: 9.6rem 0;
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
 }
 
 .comments {
@@ -452,4 +455,25 @@ body {
 .comment-name {
   font-size: 1.6rem;
   color: #777;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
