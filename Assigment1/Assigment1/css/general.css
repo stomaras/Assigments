@@ -114,3 +114,35 @@
 .margin-bottom-sm {
   margin-bottom: 2rem !important;
 }
+
+.containerr {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.subheadingg {
+  color: rgb(150, 150, 150);
+  font-size: 4rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.heading-secondaryy {
+  font-size: 3rem;
+  color: rgb(150, 150, 150);
+  background-image: linear-gradient(
+    to right,
+    rgb(240, 240, 240),
+    rgb(121, 121, 121)
+  );
+  text-transform: uppercase;
+  transition: all 0.3s;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+.heading-secondaryy:hover {
+  transform: skewY(0deg) skewX(15deg) scale(1.1);
+}

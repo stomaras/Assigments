@@ -58,6 +58,11 @@ body {
   align-items: center;
 }
 
+/* We add margin to the bottom if it is not the last child */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -486,17 +491,47 @@ body {
   padding: 9.6rem 0;
 }
 
-.coding {
-  color: #333;
-}
-
 .plan-header {
   text-align: center;
   margin-bottom: 4.8rem;
 }
 
+.pricing-plan {
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  /* For one particular grid item */
+  justify-self: end;
+  border: 2px solid #0f0803;
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: #bbccd8;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
 .plan-name {
-  color: #82b4d4;
+  color: #000000;
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
@@ -520,4 +555,9 @@ body {
 .plan-text {
   font-size: 1.6rem;
   line-height: 1.6;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
 }
