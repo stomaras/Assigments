@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="css/form.css" />
 
     <link
       rel="stylesheet"
@@ -22,10 +23,86 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>Student Form</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header class="header">
+      <img class="header--4" src="img/general/logop.png" alt="logo" />
+
+      <a href="#" class="header--1">Menu</a>
+      <a href="#" class="header--2">Courses</a>
+      <a href="#" class="header--3">Trainers</a>
+    </header>
+
+    <h2 class="studentForm">Student Form</h2>
+    <div class="container">
+      <form action="" class="form">
+        <p>
+          <label for="firstName">First Name: </label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            title="firstName"
+            required
+          />
+        </p>
+        <p>
+          <label for="lastName">Last Name: </label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            title="lastName"
+            required
+          />
+        </p>
+        <p>
+          <label for="course">Course: </label>
+          <input
+            type="text"
+            name="course"
+            id="course"
+            title="course"
+            required
+          />
+        </p>
+        <p>
+          <label for="email">Email: </label>
+          <input type="text" name="email" id="email" title="email" required />
+        </p>
+        <p>
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            title="password"
+            required
+          />
+        </p>
+        <p>
+          <label for="repeatPassword">Repeat Password: </label>
+          <input
+            type="password"
+            name="repeatPassword"
+            id="repeatPassword"
+            title="repeatPassword"
+            required
+          />
+        </p>
+        <p>
+          <label for="phoneNumber">Phone Number: </label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            title="phoneNumber"
+          />
+        </p>
+        <button type="submit" id="submit">Register</button>
+      </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

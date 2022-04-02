@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: space-around;
+  column-gap: 3rem;
+}
+
+.header--4 {
+  width: 50px;
+  height: 50px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+
+.form {
+  align-items: center;
+}
+
+.studentForm {
+  text-align: center;
+}
