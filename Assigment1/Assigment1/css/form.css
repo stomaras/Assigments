@@ -13,18 +13,31 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  background-image: url("img/forms/losAng.jpg");
 }
 
-.header {
+.main {
   display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
+  flex-direction: column;
+  margin-left: 85rem;
 }
 
-.header--1 {
-  width: 50px;
-  height: 50px;
-  justify-self: flex-start;
-  align-self: flex-start;
+#reg {
+  font-family: sans-serif;
+  margin-top: 5rem;
+  list-style: 200;
+}
+
+.descriptionLabel {
+  margin-left: 0rem;
+  font-size: 1.5rem;
+}
+
+.el {
+  display: flex;
   margin-top: 2rem;
+}
+
+#firstName {
+  border-radius: 6px;
 }
