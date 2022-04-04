@@ -39,18 +39,21 @@ function register(event) {
     confirmPassword.value,
     email.value
   );
+  console.log(myStudent);
   students.push(myStudent);
   // create an HTML element
-  // create an edit button
+  // create an edit butto
   let btnEdit = createEditButton();
+  createParagraphElement(myStudent, btnEdit);
+
   // custom attribute , inside any html element i can create my own attributes
   // Creation of my own custom attributes inside HTML elements tags
   btnEdit.studentIndex = students.length - 1;
   btnEdit.addEventListener("click", edit);
   // somehow bind the button to an element of the array
   // append this HTML element to document object
-  createParagraphElement(myStudent, btnEdit);
-  btnReset.click();
+
+  //btnReset.click();
 
   console.log(myStudent);
 }
