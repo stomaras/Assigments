@@ -12,13 +12,7 @@
     <title>Student Form</title>
   </head>
   <body>
-    <form
-      action=""
-      name="studentForm"
-      id="signup"
-      class="studentForm"
-      onsubmit="validate_form();"
-    >
+    <form action="" name="studentForm" id="signup" class="studentForm">
       <p>
         <label for="firstName">First Name:</label>
         <input
@@ -75,9 +69,7 @@
         />
       </p>
 
-      <button onclick="emailValidate()" type="submit" id="submit">
-        Register
-      </button>
+      <button type="submit" id="submit">Register</button>
       <button type="submit" id="update" hidden>Update</button>
       <button type="reset" id="reset">Reset</button>
     </form>
@@ -88,6 +80,5 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="js/studentForm.js"></script>
-    <script type="text/javascript" src="js/studentValidateForm.js"></script>
   </body>
 </html>

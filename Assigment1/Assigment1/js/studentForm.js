@@ -43,13 +43,12 @@ function register(event) {
 
   // create an HTML element
   // create an edit button
-  if (validate_form()) {
-    students.push(myStudent);
-    let btnEdit = createEditButton();
-    createParagraphElement(myStudent, btnEdit);
-    btnEdit.studentIndex = students.length - 1;
-    btnEdit.addEventListener("click", edit);
-  }
+
+  students.push(myStudent);
+  let btnEdit = createEditButton();
+  createParagraphElement(myStudent, btnEdit);
+  btnEdit.studentIndex = students.length - 1;
+  btnEdit.addEventListener("click", edit);
 
   // custom attribute , inside any html element i can create my own attributes
   // Creation of my own custom attributes inside HTML elements tags
@@ -138,36 +137,4 @@ function update(event) {
   btnUpdate.hidden = true;
   btnRegister.hidden = false;
   btnReset.click();
-}
-
-/* Email Validation */
-function emailValidate() {
-  let mail = document.getElementById("email").value;
-
-  let regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
-
-  if (regx.text(mail)) {
-    alert("You have provided a valid Email ID");
-    return true;
-  } else {
-    alert("Sorry! Incorrect Email ID");
-    return false;
-  }
-}
-
-function validate_form() {
-  valid = true;
-  if (document.studentForm.firstName.value == " ") {
-    alert("Please fill in your first name box");
-    valid = false;
-  } else if (document.studentForm.firstName.value < 2) {
-    alert("Your first name box must be at least 2 characters long");
-    valid = false;
-  } else if (document.studentForm.lastName.value == " ") {
-    alert("Please fill in your last name box");
-    valid = false;
-  } else if (document.studentForm.lastName.value < 2) {
-    alert("Your last name box must be at least 2 characters long");
-    valid = false;
-  }
 }
