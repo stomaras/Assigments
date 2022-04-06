@@ -1,5 +1,5 @@
 let trainers = [];
-let courses = [csharp, java, python, javascript];
+const courses = ["csharp", "java", "python", "javascript"];
 let trainerForm = document.getElementById("signup");
 
 let firstNameInput = document.getElementById("firstName");
@@ -11,8 +11,7 @@ let courseInput = document.getElementById("course");
 
 let btnRegister = document.getElementById("submit");
 let btnReset = document.getElementById("reset");
-
-let count = 0;
+let btnUpdate = document.getElementById("update");
 
 function Trainer(
   firstName,
@@ -60,6 +59,8 @@ btnRegister.addEventListener("click", function (e) {
     passwordInput,
     confirmPasswordInput
   );
+  //let validCourse = validateCourse(courses, courseInput);
+
   if (
     validFirstName &&
     validLastName &&
@@ -77,9 +78,13 @@ btnRegister.addEventListener("click", function (e) {
     let paragraph = createParagraphElement(mytrainer);
     li.appendChild(paragraph);
     let editbutton = createEditButton();
+    editbutton.trainerIndex = trainers.length - 1;
+    editbutton.addEventListener("click", edit);
     let span = document.createElement("span");
     span.innerHTML = "&nbsp&nbsp";
     paragraph.append(span, editbutton);
+
+    console.log(editbutton);
 
     btnReset.click();
   } else if (validFirstName == false) {
@@ -91,11 +96,29 @@ btnRegister.addEventListener("click", function (e) {
       "Email must be filled and contain (@) symbol, (.) symbol and be at least 11 characters long"
     );
   } else if (validPassword == false) {
-    alert("Password must be filled or be at least 8 characters long");
+    alert("Password must be filled or be at least 3 characters long");
   } else if (validConfirmPassword == false) {
-    alert("Confirm Password must be same with Password field");
+    alert("Password and Confirm Password must be same");
+  } else if (validCourse == false) {
+    alert(
+      "Course must be filled or be one among above mentioned: [csharp, java, python, javascript]"
+    );
   }
 });
+
+function edit(event) {
+  console.log(trainers[this.trainerIndex]);
+  firstNameInput.value = trainers[this.trainerIndex].firstName;
+  lastNameInput.value = trainers[this.trainerIndex].lastName;
+  emailInput.value = trainers[this.trainerIndex].email;
+  passwordInput.value = trainers[this.trainerIndex].password;
+  confirmPasswordInput.value = trainers[this.trainerIndex].confirmPassword;
+  courseInput.value = trainers[this.trainerIndex].course;
+
+  btnRegister.hidden = true;
+  btnUpdate.hidden = false;
+  btnUpdate.trainerIndex = this.trainerIndex;
+}
 
 // function to create a list html element
 function createListElement() {
@@ -120,10 +143,12 @@ function createEditButton() {
   return button;
 }
 
+function isString(x) {
+  return Object.prototype.toString.call(x) === "[object String]";
+}
+
 /*
 Validation Functions for input fields
-
-
 1. validateFirstName()
 2. validateLastName()
 3. validateEmail()
@@ -183,7 +208,7 @@ function validateEmail(emailInput) {
 
 // 4. validatePassword
 function validatePassword(passwordInput) {
-  const min = 8;
+  const min = 3;
   let valid = true;
   const password = passwordInput.value.trim();
 
@@ -207,11 +232,19 @@ function validateConfirmPassword(passwordInput, confirmPasswordInput) {
 }
 
 // 6 validateCourse
-function validateCourse(courseInput, courses) {
-  let valid = true;
-  let course = courseInput.value.trim().toLowerCase();
-
-  for(var i=0; i < courses.length - 1; i++){
-    if(course.)
-  }
-}
+// function validateCourse(courses, courseInput) {
+//   let valid = true;
+//   let course = courseInput.value.trim();
+//   if ((course = "")) {
+//     valid = false;
+//     alert("blank space");
+//   } else {
+//     for (var i = 0; i < courses.length; i++) {
+//       if (course.toLowerCase() === courses[i]) {
+//         valid = true;
+//         alert("equal");
+//       }
+//     }
+//   }
+//   return valid;
+// }
