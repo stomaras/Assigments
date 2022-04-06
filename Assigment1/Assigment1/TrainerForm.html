@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Trainer Form</title>
   </head>
   <body>
-    <form action="">
-      <p>
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" id="firstName" title="firstName" />
-      </p>
-      <p>
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" id="lastName" title="lastName" />
-      </p>
-      <p>
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email" title="email" />
-      </p>
-      <p>
+    <form
+    action=""
+    name="TrainerForm"
+    id="signup"
+    class="trainerForm margin-top-md"
+  >
+    <h2>Trainer Form</h2>
+    <p>
+      <label for="firstName">First Name:</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        title="firstName"
+        placeholder="firstName"
+        required
+      />
+    </p>
+    <p>
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        title="lastName"
+        placeholder="lastName"
+        required
+      />
+    </p>
+    <p>
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        title="email"
+        placeholder="email"
+        required
+      />
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        title="password"
+        placeholder="password"
+        required
+      />
+    </p>
+    <p>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        title="confirmPassword"
+        placeholder="confirm password"
+        required
+      />
+    </p>
+    <p>
         <label for="course">Course:</label>
-        <input type="text" name="course" id="course" title="course" />
-      </p>
-      <p>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" title="password" />
-      </p>
-      <p>
-        <label for="confirmPassword">Confirm Password:</label>
         <input
-          type="password"
-          name="confirmPassword"
-          id="confirmPassword"
-          title="confirmPassword"
+          type="text"
+          name="course"
+          id="course"
+          title="course"
+          placeholder="course"
+          required
         />
       </p>
 
+    <div id="buttons">
       <button type="submit" id="submit">Register</button>
       <button type="submit" id="update" hidden>Update</button>
       <button type="reset" id="reset">Reset</button>
     </form>
-    <div id="trainersDiv"></div>
-    <!--End main-->
+    </div>
+    
+  <div id="trainers">
+      <ul id="theList"></ul>
+      
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-    <script src="js/trainerForm.js"></script>
+  <script src="js/trainerForm.js"></script>
   </body>
 </html>

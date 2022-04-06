@@ -1,4 +1,5 @@
 let students = [];
+let courses = [csharp, java, python, javascript];
 
 let btnRegister = document.getElementById("submit");
 btnRegister.addEventListener("click", register);
