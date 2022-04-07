@@ -587,3 +587,38 @@ body {
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/*******************************************/
+/* CTA SECTION */
+/********************************************/
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  /* For all the big overall page layout elements i use CSS Grid */
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 out of 3 for the first one and 1 out of 3 for the second one */
+  background-color: #4fa6ce;
+  box-shadow: 0 2.4rem 4.8rem rgba(71, 71, 71, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #4fa6ce, #075174);
+  height: 50rem;
+  overflow: hidden;
+}
+
+.cta-text-box {
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(103, 181, 233, 0.3),
+      rgba(28, 93, 128, 0.3)
+    ),
+    url(../img/cta/developerGirl.jpg);
+  background-size: cover;
+  background-position: center;
+}
