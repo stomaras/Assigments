@@ -115,9 +115,7 @@ function edit(event) {
   confirmPasswordInput.value = trainers[this.trainerIndex].confirmPassword;
   courseInput.value = trainers[this.trainerIndex].course;
 
-  btnRegister.hidden = true;
-  btnUpdate.hidden = false;
-  btnUpdate.trainerIndex = this.trainerIndex;
+  console.log(trainerToString(trainers[this.trainerIndex]));
 }
 
 // function to create a list html element
