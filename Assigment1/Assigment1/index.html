@@ -496,7 +496,54 @@
       <section class="section-cta">
         <div class="container">
           <div class="cta">
-            <div class="cta-text-box">CTA</div>
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">
+                Get your first touch with modern civilization !
+              </h2>
+              <p class="cta-text">
+                No matter what is happening in your life, always have one thing
+                you are moving forward with programming for example, so you feel
+                good about it and yourself.It can be great if you can have
+                multiple such things but it’s wiser to have one core thing
+                you’re progressing on.
+              </p>
+
+              <form action="" class="cta-form">
+                <!-- By Default label and input are inline elements so don't crearte a line break div create a block level element which creates a line break after it-->
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
+                  <select id="select-where" required>
+                    <option value="">Please choouse one option:</option>
+                    <option value="Friends">Friends</option>
+                    <option value="YouTube">YouTube video</option>
+                    <option value="Podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <button class="btn">Sign Up</button>
+              </form>
+            </div>
 
             <!--This element acts as an image-->
             <div
