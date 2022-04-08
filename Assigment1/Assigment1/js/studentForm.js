@@ -102,6 +102,8 @@ function register(event) {
     let span = createSpan();
     span.innerHTML = "&nbsp&nbsp";
     paragraph.append(span, editButton);
+    let hoverButton = document.getElementsByClassName("editButton");
+    hoverButton.addEventListener("mousemove", hover);
 
     btnReset.click();
   } else if (validFirstNameMessage !== "") {
@@ -131,6 +133,11 @@ function edit(event) {
   console.log(trainerToString(students[this.studentIndex]));
 }
 
+function hover(event) {
+  event.target.style.color = "white";
+  event.target.style.backgroundColor = "black";
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////// CREATION OF DOM ELEMENTS //////////////////////////////
 function createListElement() {
   let li = document.createElement("li");
@@ -150,6 +157,11 @@ function createEditButton() {
   let button = document.createElement("button");
   button.setAttribute("class", "editButton");
   button.textContent = "Edit";
+  button.style = "color:white";
+  button.style.backgroundColor = "black";
+  button.style.height = "4rem";
+  button.style.width = "9rem";
+  button.style.cursor = "pointer";
   return button;
 }
 

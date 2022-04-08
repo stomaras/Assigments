@@ -52,15 +52,15 @@
         </ul>
       </nav>
     </header>
+    <h2 class="heading-student-form">Student Form</h2>
     <form
       action=""
       class="StudentForm"
       id="signup"
       class="StudentForm margin-top-md"
     >
-      <h2 class="heading-student-form">Student Form</h2>
-      <p class="p-student-form">
-        <label for="firstName">First Name:</label>
+      <div class="p-student-form--1">
+        <label for="firstName" class="dataTextLabel">First Name:</label>
         <input
           type="text"
           name="firstName"
@@ -68,9 +68,9 @@
           title="firstName"
           placeholder="firstName"
         />
-      </p>
-      <p class="p-student-form">
-        <label for="lastName">Last Name:</label>
+      </div>
+      <div class="p-student-form--2">
+        <label for="lastName" class="dataTextLabel">Last Name:</label>
         <input
           type="text"
           name="lastName"
@@ -78,9 +78,9 @@
           title="lastName"
           placeholder="lastName"
         />
-      </p>
-      <p class="p-student-form">
-        <label for="email">Email:</label>
+      </div>
+      <div class="p-student-form--3">
+        <label for="email" class="dataTextLabel">Email:</label>
         <input
           type="email"
           name="email"
@@ -88,9 +88,9 @@
           title="email"
           placeholder="email"
         />
-      </p>
-      <p class="p-student-form">
-        <label for="password">Password:</label>
+      </div>
+      <div class="p-student-form--4">
+        <label for="password" class="dataTextLabel">Password:</label>
         <input
           type="password"
           name="password"
@@ -98,9 +98,11 @@
           title="password"
           placeholder="password"
         />
-      </p>
-      <p class="p-student-form">
-        <label for="confirmPassword">Confirm Password:</label>
+      </div>
+      <div class="p-student-form--5">
+        <label for="confirmPassword" class="dataTextLabel"
+          >Confirm Password:</label
+        >
         <input
           type="password"
           name="confirmPassword"
@@ -108,9 +110,9 @@
           title="confirmPassword"
           placeholder="confirm password"
         />
-      </p>
-      <p class="p-student-form">
-        <label for="course">Course:</label>
+      </div>
+      <div class="p-student-form--6">
+        <label for="course" class="dataTextLabel">Course:</label>
         <input
           type="text"
           name="course"
@@ -118,45 +120,55 @@
           title="course"
           placeholder="course"
         />
-      </p>
-      <p class="p-student-form">Your Gender</p>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-          value="Male"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault1"> Male </label>
       </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault2"
-          value="Female"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault2"> Female </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault3"
-          value="Other"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault3"> Other </label>
-      </div>
+      <div class="p-student-form--7"></div>
 
+      <div class="p-student-form">
+        <p id="yourGender">Gender:</p>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            value="Male"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> Male </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            value="Female"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Female
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault3"
+            value="Other"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault3">
+            Other
+          </label>
+        </div>
+      </div>
+      <div class="p-student-form--7"></div>
+      <div class="p-student-form--7"></div>
       <div id="buttons">
-        <button type="submit" id="submit">Register</button>
-        <button type="reset" id="reset">Reset</button>
+        <button type="submit" id="submit" class="reg--1">Register</button>
+        <button type="reset" id="reset" class="reg--2">Reset</button>
       </div>
     </form>
 

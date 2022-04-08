@@ -1,49 +1,185 @@
 .StudentForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 0rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+
+  height: 50rem;
+}
+
+/* styling of 1st item */
+.p-student-form--1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.p-student-form--1 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--1 input {
+  height: 2.6rem;
+}
+
+.p-student-form--2 {
+  display: flex;
   justify-content: center;
-  margin-bottom: 15rem;
-  margin-top: 15rem;
-  box-sizing: border-box;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.p-student-form--2 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--2 input {
+  height: 2.6rem;
+}
+
+.p-student-form--3 {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.p-student-form--3 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--3 input {
+  height: 2.6rem;
+}
+
+.p-student-form--4 {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+.p-student-form--4 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--4 input {
+  height: 2.6rem;
+}
+
+.p-student-form--5 {
+  display: flex;
+  justify-content: center;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+  margin-right: 5rem;
+}
+
+.p-student-form--5 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--5 input {
+  height: 2.6rem;
+}
+
+.p-student-form--6 {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 1rem;
+  height: 3rem;
+  align-self: flex-start;
+  margin-right: 5rem;
+}
+
+.p-student-form--6 label {
+  margin-top: 0.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.p-student-form--6 input {
+  height: 2.6rem;
 }
 
 .heading-student-form {
-  margin-bottom: 3rem;
-  font-size: 4rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.p-student-form {
-  display: flex;
-}
-
-.p-student-form label {
-  font-size: 2rem;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="radio"] {
-  box-shadow: 0 0 15px 4px #ccc;
-  border-radius: 5px;
-}
-
-::placeholder {
-  color: #ccc;
-  font-size: 1.5rem;
+.dataTextLabel {
+  font-size: 1.3rem;
 }
 
 #buttons {
   display: flex;
-  justify-content: space-between;
+  margin-left: 23rem;
+  margin-top: 5rem;
 }
 
-#submit {
-  margin-right: 1rem;
-  margin-top: 2rem;
+.reg--1 {
+  margin-right: 2rem;
+  height: 4rem;
+  width: 9rem;
+
+  color: rgb(255, 255, 255);
+  background-color: black;
 }
 
-#reset {
+.reg--1:hover {
+  margin-right: 2rem;
+  height: 4rem;
+  width: 9rem;
+
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.reg--2 {
+  margin-right: 2rem;
+  height: 4rem;
+  width: 9rem;
+  color: black;
+  background-color: white;
+}
+
+.reg--2:hover {
+  margin-right: 2rem;
+  height: 4rem;
+  width: 9rem;
+
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  transition: all 0.4s;
+}
+
+.p-student-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rem;
+  margin-bottom: 2rem;
+}
+
+.p-student-form #yourGender {
+  margin-right: 2rem;
+}
+
+.p-student-form .form-check {
   margin-top: 2rem;
 }
