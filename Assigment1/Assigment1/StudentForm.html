@@ -7,6 +7,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/studentForm.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -19,15 +37,29 @@
     <title>Student Form</title>
   </head>
   <body>
-    <h1></h1>
+    <header class="header">
+      <a href="#">
+        <img class="logo" src="img/general/logop.png" alt="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">How It Works</a></li>
+          <li><a class="main-nav-link" href="#">3 Pillors of Web</a></li>
+          <li><a class="main-nav-link" href="#">Developers</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Call To Action</a></li>
+        </ul>
+      </nav>
+    </header>
     <form
       action=""
-      name="TrainerForm"
+      class="StudentForm"
       id="signup"
-      class="trainerForm margin-top-md"
+      class="StudentForm margin-top-md"
     >
-      <h2>Student Form</h2>
-      <p>
+      <h2 class="heading-student-form">Student Form</h2>
+      <p class="p-student-form">
         <label for="firstName">First Name:</label>
         <input
           type="text"
@@ -37,7 +69,7 @@
           placeholder="firstName"
         />
       </p>
-      <p>
+      <p class="p-student-form">
         <label for="lastName">Last Name:</label>
         <input
           type="text"
@@ -47,7 +79,7 @@
           placeholder="lastName"
         />
       </p>
-      <p>
+      <p class="p-student-form">
         <label for="email">Email:</label>
         <input
           type="email"
@@ -57,7 +89,7 @@
           placeholder="email"
         />
       </p>
-      <p>
+      <p class="p-student-form">
         <label for="password">Password:</label>
         <input
           type="password"
@@ -67,7 +99,7 @@
           placeholder="password"
         />
       </p>
-      <p>
+      <p class="p-student-form">
         <label for="confirmPassword">Confirm Password:</label>
         <input
           type="password"
@@ -77,7 +109,7 @@
           placeholder="confirm password"
         />
       </p>
-      <p>
+      <p class="p-student-form">
         <label for="course">Course:</label>
         <input
           type="text"
@@ -87,7 +119,7 @@
           placeholder="course"
         />
       </p>
-      <p>Your Gender</p>
+      <p class="p-student-form">Your Gender</p>
       <div class="form-check">
         <input
           class="form-check-input"
@@ -131,6 +163,80 @@
     <div id="students">
       <ul id="theList"></ul>
     </div>
+
+    <footer class="footer">
+      <div class="container grid grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" src="img/general/logop.png" alt="logo" />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2022 by PeopleCert. All rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="footer-address">
+              Address : 623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p class="footer-phone-email">
+              <a class="footer-link" href="tel:415-201-6370"
+                >Phone: 415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@peoplecert.com"
+                >Email: hello@peoplecert.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Peoplecert</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Developer Partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="#">Project Manager Directory</a>
+            </li>
+            <li><a class="footer-link" href="#">Help Center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

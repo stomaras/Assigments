@@ -11,7 +11,9 @@ let courseInput = document.getElementById("course");
 
 let btnRegister = document.getElementById("submit");
 let btnReset = document.getElementById("reset");
-let btnUpdate = document.getElementById("update");
+
+// error message initialization
+let message = "";
 
 function Trainer(
   firstName,
@@ -51,22 +53,24 @@ btnRegister.addEventListener("click", function (e) {
     courseInput.value
   );
 
-  let validFirstName = validateFirstName(firstNameInput);
-  let validLastName = validateLastName(lastNameInput);
+  let validFirstNameMessage = validateFirstName(firstNameInput, message);
+  let validLastNameMessage = validateLastName(lastNameInput, message);
   let validEmail = validateEmail(emailInput);
   const validPassword = validatePassword(passwordInput);
   const validConfirmPassword = validateConfirmPassword(
     passwordInput,
     confirmPasswordInput
   );
+  let validCourseMessage = validateCourse(courses, courseInput, message);
   //let validCourse = validateCourse(courses, courseInput);
 
   if (
-    validFirstName &&
-    validLastName &&
+    validFirstNameMessage == "" &&
+    validLastNameMessage == "" &&
     validEmail &&
     validPassword &&
-    validConfirmPassword
+    validConfirmPassword &&
+    validCourseMessage == ""
   ) {
     trainers.push(mytrainer);
 
@@ -87,10 +91,10 @@ btnRegister.addEventListener("click", function (e) {
     console.log(editbutton);
 
     btnReset.click();
-  } else if (validFirstName == false) {
-    alert("First Name must be filled and be between 2 or 25 characters long");
-  } else if (validLastName == false) {
-    alert("Last Name must be filled and be between 2 or 25 characters long");
+  } else if (validFirstNameMessage !== "") {
+    alert(validFirstNameMessage);
+  } else if (validLastNameMessage !== "") {
+    alert(validLastNameMessage);
   } else if (validEmail == false) {
     alert(
       "Email must be filled and contain (@) symbol, (.) symbol and be at least 11 characters long"
@@ -99,10 +103,8 @@ btnRegister.addEventListener("click", function (e) {
     alert("Password must be filled or be at least 3 characters long");
   } else if (validConfirmPassword == false) {
     alert("Password and Confirm Password must be same");
-  } else if (validCourse == false) {
-    alert(
-      "Course must be filled or be one among above mentioned: [csharp, java, python, javascript]"
-    );
+  } else if (validCourseMessage !== "") {
+    alert(validCourseMessage);
   }
 });
 
@@ -141,10 +143,6 @@ function createEditButton() {
   return button;
 }
 
-function isString(x) {
-  return Object.prototype.toString.call(x) === "[object String]";
-}
-
 /*
 Validation Functions for input fields
 1. validateFirstName()
@@ -156,35 +154,39 @@ Validation Functions for input fields
 */
 
 // 1. validateFirstName()
-function validateFirstName(firstNameInput) {
+function validateFirstName(firstNameInput, message) {
   const min = 2;
   const max = 25;
-  let valid = true;
 
+  var regName = /^[a-zA-Z]/;
   let firstNamee = firstNameInput.value.trim();
 
   if (firstNamee == "") {
-    valid = false;
+    message = "First Name must not be blank!";
   } else if (firstNamee.length < min || firstNamee.length > max) {
-    valid = false;
+    message = "First Name must be between 2 and 25 characters long!";
+  } else if (!regName.test(firstNamee)) {
+    message = "First Name can not contain symbols and numbers!";
   }
-  return valid;
+  return message;
 }
 
 // 2. validateLastName()
-function validateLastName(lastNameInput) {
+function validateLastName(lastNameInput, message) {
   const min = 2;
   const max = 25;
-  let valid = true;
+  var regLastName = /^[a-zA-Z]/;
 
   let lastNamee = lastNameInput.value.trim();
 
   if (lastNamee == "") {
-    valid = false;
+    message = "Last Name must not be blank!";
   } else if (lastNamee.length < min || lastNamee.length > max) {
-    valid = false;
+    message = "Last Name must be between 2 and 25 characters long!";
+  } else if (!regLastName.test(lastNamee)) {
+    message = "Last Name can not contain symbols and numbers!";
   }
-  return valid;
+  return message;
 }
 
 // 3. validateEmail
@@ -229,20 +231,24 @@ function validateConfirmPassword(passwordInput, confirmPasswordInput) {
   return valid;
 }
 
-// 6 validateCourse
-// function validateCourse(courses, courseInput) {
-//   let valid = true;
-//   let course = courseInput.value.trim();
-//   if ((course = "")) {
-//     valid = false;
-//     alert("blank space");
-//   } else {
-//     for (var i = 0; i < courses.length; i++) {
-//       if (course.toLowerCase() === courses[i]) {
-//         valid = true;
-//         alert("equal");
-//       }
-//     }
-//   }
-//   return valid;
-// }
+// 6. validateCourse
+function validateCourse(courses, courseInput, message) {
+  var regCourse = /^[a-zA-Z]/;
+  let course = courseInput.value.trim().toLowerCase();
+
+  if (course === "") {
+    message = "Course Field must not be blank!";
+  } else if (!regCourse.test(course)) {
+    message = "Course can't contain special characters and numbers";
+  } else {
+    for (var i = 0; i < courses.length; i++) {
+      if (courses[i] === course) {
+        message = "";
+        return message;
+      }
+    }
+    message =
+      "Course field must be csharp (or) java (or) python (or) javascript!";
+  }
+  return message;
+}
