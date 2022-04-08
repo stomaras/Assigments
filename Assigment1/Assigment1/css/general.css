@@ -144,7 +144,6 @@
 }
 
 .subheadingg {
-  color: rgb(150, 150, 150);
   font-size: 4rem;
   line-height: 2rem;
   margin-bottom: 2rem;
@@ -153,11 +152,7 @@
 .heading-secondaryy {
   font-size: 3rem;
   color: rgb(150, 150, 150);
-  background-image: linear-gradient(
-    to right,
-    rgb(240, 240, 240),
-    rgb(121, 121, 121)
-  );
+
   text-transform: uppercase;
   transition: all 0.3s;
   color: transparent;
