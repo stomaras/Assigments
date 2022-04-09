@@ -20,7 +20,8 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+    <!--<script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>-->
+    <script defer src="js/script.js"></script>
     <title>Online Class</title>
   </head>
   <body class="body">
@@ -31,11 +32,19 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How It Works</a></li>
-          <li><a class="main-nav-link" href="#">3 Pillors of Web</a></li>
-          <li><a class="main-nav-link" href="#">Developers</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Call To Action</a></li>
+          <li><a class="main-nav-link" href="#howItWorks">How It Works</a></li>
+          <li>
+            <a class="main-nav-link" href="#threePillors">3 Pillors of Web</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#developersSection">Developers</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#callToAction"
+              >Call To Action</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -50,7 +59,7 @@
             <a href="StudentForm.html" class="btn btn--full">Students</a>
             <a href="TrainerForm.html" class="btn btn--full">Teachers</a>
             <a href="CoursesForm.html" class="btn btn--full">Assigments</a>
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#footerr" class="btn btn--outline">About us &darr;</a>
 
             <div class="professional-developers">
               <div class="developers-imgs">
@@ -109,7 +118,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="howItWorks">
         <div class="container">
           <span class="subheading">How an app works</span>
           <h2 class="heading-secondary">
@@ -177,7 +186,7 @@
         </div>
       </section>
 
-      <section class="section-lifecycle">
+      <section class="section-lifecycle" id="threePillors">
         <div class="container center-text">
           <span class="subheading"> Lifecycle </span>
           <h2 class="heading-secondary">
@@ -291,7 +300,10 @@
         </div>
       </section>
 
-      <section class="section-comments grid grid--2-cols">
+      <section
+        class="section-comments grid grid--2-cols"
+        id="developersSection"
+      >
         <div class="comments-container">
           <span class="subheading">Comments</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -393,7 +405,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="containerr">
           <span class="subheadingg">Pricing</span>
           <h2 class="heading-secondaryy">
@@ -495,7 +507,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="callToAction">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -555,7 +567,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footerr">
       <div class="container grid grid--5-cols">
         <div class="logo-col">
           <a href="#" class="footer-logo">
