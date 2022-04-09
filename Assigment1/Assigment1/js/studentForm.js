@@ -18,6 +18,7 @@ let courseInput = document.getElementById("course");
 const radioButtonsInputs = document.querySelectorAll(
   'input[name="flexRadioDefault"]'
 );
+const divStudents = document.getElementById("students");
 
 // error message initialization
 let message = "";
@@ -25,9 +26,13 @@ let message = "";
 // Get All Buttons
 const btnRegister = document.getElementById("submit");
 const btnReset = document.getElementById("reset");
+const btnUpdate = document.getElementById("update");
+
+const ul = document.getElementById("theList");
 
 btnRegister.addEventListener("click", register);
 btnReset.addEventListener("click", reset);
+btnUpdate.addEventListener("click", update);
 
 function Student(
   firstName,
@@ -90,8 +95,7 @@ function register(event) {
 
     students.push(myStudent);
     // Creation of unordered list students
-    const divStudents = document.getElementById("students");
-    const ul = document.getElementById("theList");
+
     let li = createListElement();
     ul.appendChild(li);
     let paragraph = createParagraph(myStudent);
@@ -103,7 +107,6 @@ function register(event) {
     span.innerHTML = "&nbsp&nbsp";
     paragraph.append(span, editButton);
     let hoverButton = document.getElementsByClassName("editButton");
-    hoverButton.addEventListener("mousemove", hover);
 
     btnReset.click();
   } else if (validFirstNameMessage !== "") {
@@ -129,8 +132,42 @@ function edit(event) {
   passwordInput.value = students[this.studentIndex].password;
   confirmPasswordInput.value = students[this.studentIndex].confirmPassword;
   courseInput.value = students[this.studentIndex].course;
+  btnRegister.hidden = true;
+  btnUpdate.hidden = false;
+  btnUpdate.studentIndex = this.studentIndex;
+}
 
-  console.log(trainerToString(students[this.studentIndex]));
+function update(event) {
+  event.preventDefault();
+  students[this.studentIndex] = new Student(
+    firstNameInput.value,
+    lastNameInput.value,
+    emailInput.value,
+    passwordInput.value,
+    confirmPasswordInput.value,
+    courseInput.value,
+    radioButtonsInputs.value
+  );
+  divStudents.innerHTML = "";
+  ul.innerHTML = "";
+  divStudents.appendChild(ul);
+  for (let i = 0; i < students.length; i++) {
+    let li = createListElement();
+    ul.appendChild(li);
+    let pa = createParagraph(students[i]);
+    console.log(pa);
+    li.appendChild(pa);
+    let editButton = createEditButton();
+    console.log(editButton);
+    let span = createSpan();
+    pa.append(span, editButton);
+    console.log(li);
+    editButton.studentIndex = i;
+    editButton.addEventListener("click", edit);
+  }
+  btnUpdate.hidden = true;
+  btnRegister.hidden = false;
+  btnReset.click();
 }
 
 function hover(event) {
