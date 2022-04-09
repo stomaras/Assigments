@@ -125,7 +125,7 @@ function register(event) {
 }
 
 function edit(event) {
-  console.log(students[this.trainerIndex]);
+  console.log(students[this.studentIndex]);
   firstNameInput.value = students[this.studentIndex].firstName;
   lastNameInput.value = students[this.studentIndex].lastName;
   emailInput.value = students[this.studentIndex].email;
@@ -148,26 +148,50 @@ function update(event) {
     courseInput.value,
     radioButtonsInputs.value
   );
-  divStudents.innerHTML = "";
-  ul.innerHTML = "";
-  divStudents.appendChild(ul);
-  for (let i = 0; i < students.length; i++) {
-    let li = createListElement();
-    ul.appendChild(li);
-    let pa = createParagraph(students[i]);
-    console.log(pa);
-    li.appendChild(pa);
-    let editButton = createEditButton();
-    console.log(editButton);
-    let span = createSpan();
-    pa.append(span, editButton);
-    console.log(li);
-    editButton.studentIndex = i;
-    editButton.addEventListener("click", edit);
+  console.log(students[this.studentIndex]);
+  let updateFirstName = students[this.studentIndex].firstName;
+  let updateLastName = students[this.studentIndex].lastName;
+  let updateEmail = students[this.studentIndex].email;
+  console.log(updateEmail);
+  console.log(updateFirstName);
+  let validUpdateFirstName = validateUpdateFirstName(updateFirstName, message);
+  let validUpdateLastName = validateUpdateLastName(updateLastName, message);
+  let validUpdateEmail = validateUpdateEmail(updateEmail);
+  let newMessage = "";
+  if (
+    validUpdateFirstName == "" &&
+    validUpdateLastName == "" &&
+    validUpdateEmail
+  ) {
+    divStudents.innerHTML = "";
+    ul.innerHTML = "";
+    divStudents.appendChild(ul);
+    for (let i = 0; i < students.length; i++) {
+      let li = createListElement();
+      ul.appendChild(li);
+      let pa = createParagraph(students[i]);
+      console.log(pa);
+      li.appendChild(pa);
+      let editButton = createEditButton();
+      console.log(editButton);
+      let span = createSpan();
+      pa.append(span, editButton);
+      console.log(li);
+      editButton.studentIndex = i;
+      editButton.addEventListener("click", edit);
+    }
+    btnUpdate.hidden = true;
+    btnRegister.hidden = false;
+    btnReset.click();
+  } else if (validUpdateFirstName !== "") {
+    alert(validUpdateFirstName);
+  } else if (validUpdateLastName !== "") {
+    alert(validUpdateLastName);
+  } else if (!validUpdateEmail) {
+    newMessage =
+      "Email must be filled and contain (@) character and (.) character";
+    alert(newMessage);
   }
-  btnUpdate.hidden = true;
-  btnRegister.hidden = false;
-  btnReset.click();
 }
 
 function hover(event) {
@@ -324,4 +348,53 @@ function checkedRadioButton(arrayRadioButtons) {
     }
   }
   return selectedRadio;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+///////////////////////// Validation For Update Button //////////////////////
+// 1. validateFirstName()
+function validateUpdateFirstName(studentFirstName, message) {
+  const min = 2;
+  const max = 25;
+  var regName = /^[a-zA-Z]/;
+
+  if (studentFirstName == "") {
+    message = "First Name must not be blank!";
+  } else if (studentFirstName.length < min || studentFirstName.length > max) {
+    message = "First Name must be between 2 and 25 characters long!";
+  } else if (!regName.test(studentFirstName)) {
+    message = "First Name can not contain symbols and numbers!";
+  }
+  return message;
+}
+
+function validateUpdateLastName(studentLastName, message) {
+  const min = 2;
+  const max = 25;
+  var regName = /^[a-zA-Z]/;
+
+  if (studentLastName == "") {
+    message = "Last Name must not be blank!";
+  } else if (studentLastName.length < min || studentLastName.length > max) {
+    message = "Last Name must be between 2 and 25 characters long!";
+  } else if (!regName.test(studentLastName)) {
+    message = "Last Name can not contain symbols and numbers!";
+  }
+  return message;
+}
+
+function validateUpdateEmail(email) {
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  let valid = true;
+
+  if (email == "") {
+    valid = false;
+  } else if (!emailRegex.test(email)) {
+    valid = false;
+  } else if (email.length < 12) {
+    valid = false;
+  }
+  return valid;
 }
