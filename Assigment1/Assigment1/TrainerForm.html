@@ -24,7 +24,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -33,18 +32,34 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <title>Trainer Form</title>
+
+    <title>Student Form</title>
   </head>
   <body>
+    <header class="header">
+      <a href="#">
+        <img class="logo" src="img/general/logop.png" alt="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="StudentForm.html">Student</a></li>
+          <li>
+            <a class="main-nav-link" href="AssigmentForm.html">Assigments</a>
+          </li>
+          <li><a class="main-nav-link" href="index.html">Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2 class="heading-student-form">Trainer Form</h2>
     <form
       action=""
-      name="TrainerForm"
+      class="StudentForm"
       id="signup"
-      class="TrainerForm margin-top-md"
+      class="StudentForm margin-top-md"
     >
-      <h2>Trainer Form</h2>
-      <p>
-        <label for="firstName">First Name:</label>
+      <div class="p-student-form--1">
+        <label for="firstName" class="dataTextLabel">First Name:</label>
         <input
           type="text"
           name="firstName"
@@ -52,9 +67,9 @@
           title="firstName"
           placeholder="firstName"
         />
-      </p>
-      <p>
-        <label for="lastName">Last Name:</label>
+      </div>
+      <div class="p-student-form--2">
+        <label for="lastName" class="dataTextLabel">Last Name:</label>
         <input
           type="text"
           name="lastName"
@@ -62,9 +77,9 @@
           title="lastName"
           placeholder="lastName"
         />
-      </p>
-      <p>
-        <label for="email">Email:</label>
+      </div>
+      <div class="p-student-form--3">
+        <label for="email" class="dataTextLabel">Email:</label>
         <input
           type="email"
           name="email"
@@ -72,9 +87,9 @@
           title="email"
           placeholder="email"
         />
-      </p>
-      <p>
-        <label for="password">Password:</label>
+      </div>
+      <div class="p-student-form--4">
+        <label for="password" class="dataTextLabel">Password:</label>
         <input
           type="password"
           name="password"
@@ -82,9 +97,11 @@
           title="password"
           placeholder="password"
         />
-      </p>
-      <p>
-        <label for="confirmPassword">Confirm Password:</label>
+      </div>
+      <div class="p-student-form--5">
+        <label for="confirmPassword" class="dataTextLabel"
+          >Confirm Password:</label
+        >
         <input
           type="password"
           name="confirmPassword"
@@ -92,9 +109,9 @@
           title="confirmPassword"
           placeholder="confirm password"
         />
-      </p>
-      <p>
-        <label for="course">Course:</label>
+      </div>
+      <div class="p-student-form--6">
+        <label for="course" class="dataTextLabel">Course:</label>
         <input
           type="text"
           name="course"
@@ -102,18 +119,113 @@
           title="course"
           placeholder="course"
         />
-      </p>
-
-      <div id="buttons">
-        <button type="submit" id="submit">Register</button>
-        <button type="reset" id="reset">Reset</button>
       </div>
+      <div class="p-student-form--7"></div>
+      <div id="buttons">
+        <button type="submit" id="submit" class="reg--1">Register</button>
+        <button type="submit" id="update" class="reg--3" hidden>Update</button>
+        <button type="reset" id="reset" class="reg--2">Reset</button>
+      </div>
+      <div class="p-student-form--7"></div>
+
+      <div class="p-student-form--7"></div>
     </form>
 
-    <div id="trainers">
+    <div id="students">
       <ul id="theList"></ul>
     </div>
 
+    <footer class="footer">
+      <div class="container grid grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" src="img/general/logop.png" alt="logo" />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2022 by PeopleCert. All rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="footer-address">
+              Address : 623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p class="footer-phone-email">
+              <a class="footer-link" href="tel:415-201-6370"
+                >Phone: 415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@peoplecert.com"
+                >Email: hello@peoplecert.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Peoplecert</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Developer Partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="#">Project Manager Directory</a>
+            </li>
+            <li><a class="footer-link" href="#">Help Center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/trainerForm.js"></script>
   </body>
 </html>
