@@ -3,19 +3,10 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/studentForm.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -32,6 +24,14 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <!--<script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>-->
     <script defer src="js/script.js"></script>
 
@@ -47,12 +47,94 @@
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="StudentForm.html">Student</a></li>
           <li>
-            <a class="main-nav-link" href="AssigmentForm.html">Assigments</a>
+            <a class="main-nav-link" href="TrainerForm.html">Trainer</a>
           </li>
           <li><a class="main-nav-link" href="index.html">Menu</a></li>
         </ul>
       </nav>
     </header>
+    <br />
+    <br />
+
+    <h2 class="heading-student-form">Assigment Form</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail4"
+            placeholder="Email"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Full Name"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Course</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Course"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Assigment</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <label class="form-check-label" for="gridCheck"> Check me out </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comments</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">file input</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile1"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br />
+    <br />
 
     <!-- Optional JavaScript; choose one of the two! -->
 
