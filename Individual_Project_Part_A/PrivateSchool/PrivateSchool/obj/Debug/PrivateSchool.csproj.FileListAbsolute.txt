@@ -1,0 +1,7 @@
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\bin\Debug\PrivateSchool.exe.config
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\bin\Debug\PrivateSchool.exe
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\bin\Debug\PrivateSchool.pdb
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\obj\Debug\PrivateSchool.csproj.AssemblyReference.cache
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\obj\Debug\PrivateSchool.csproj.CoreCompileInputs.cache
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\obj\Debug\PrivateSchool.exe
+C:\Users\spyros\source\repos\PrivateSchool\PrivateSchool\obj\Debug\PrivateSchool.pdb

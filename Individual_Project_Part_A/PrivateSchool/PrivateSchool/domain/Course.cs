@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrivateSchool.domain
 {
-    class Course
+    abstract class Course
     {
         private string _title;
 
@@ -47,6 +47,8 @@ namespace PrivateSchool.domain
             get { return _end_date; }
             set { _end_date = value; }
         }
+
+        public abstract override string ToString();
 
 
 
