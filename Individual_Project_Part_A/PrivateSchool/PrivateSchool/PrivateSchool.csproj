@@ -58,22 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="domain\Assigment.cs" />
-    <Compile Include="domain\Course.cs" />
-    <Compile Include="domain\CourseDetails.cs" />
-    <Compile Include="domain\CourseDateDetails.cs" />
-    <Compile Include="domain\FullName.cs" />
-    <Compile Include="domain\RandomCourse.cs" />
+    <Compile Include="domain\DateBirth.cs" />
+    <Compile Include="domain\MinMax.cs" />
+    <Compile Include="domain\NameMinMax.cs" />
     <Compile Include="domain\RandomStudent.cs" />
-    <Compile Include="domain\Stream.cs" />
     <Compile Include="domain\Student.cs" />
     <Compile Include="domain\StudentDetails.cs" />
-    <Compile Include="domain\Trainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="services\CourseService.cs" />
     <Compile Include="services\School.cs" />
-    <Compile Include="services\UserDataService.cs" />
+    <Compile Include="services\RandomService.cs" />
+    <Compile Include="services\StudentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

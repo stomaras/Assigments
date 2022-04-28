@@ -8,37 +8,37 @@ namespace PrivateSchool.services
 {
     class School
     {
-        private CourseDetails _courseDetails;
+        private StudentDetails _studentDetails;
 
-        public CourseDetails CourseDetails
+        public StudentDetails StudentDetails
         {
-            get { return _courseDetails; }
-            set { _courseDetails = value; }
+            get { return _studentDetails; }
+            set { _studentDetails = value; }
         }
 
-        private int _noOfCourses;
+        private int _noOfStudents;
 
-        public int NoOfCourses
+        public int NoOfStudents
         {
-            get { return _noOfCourses; }
-            set { _noOfCourses = value; }
+            get { return _noOfStudents; }
+            set { _noOfStudents = value; }
         }
 
-        public School(CourseDetails courseDetails, int noOfCourses)
+        public School(StudentDetails studentDetails, int noOfStudents)
         {
-            CourseDetails = courseDetails;
-            NoOfCourses = noOfCourses;
+            StudentDetails = studentDetails;
+            NoOfStudents = noOfStudents;
         }
-
 
         public void Start()
         {
-            Console.WriteLine("-----------------------------------------Private School Console Application------------------------------------------");
-            CourseService courseService = new CourseService(_courseDetails, _noOfCourses);
+            Console.WriteLine("-----------------Private School Application Start----------------------------");
 
-            foreach(RandomCourse course in courseService.Courses)
+            StudentService studentService = new StudentService(_studentDetails, _noOfStudents);
+
+            foreach(RandomStudent student in studentService.Students)
             {
-                Console.WriteLine(course);
+                Console.WriteLine(student);
             }
         }
     }

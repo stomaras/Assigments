@@ -11,18 +11,16 @@ namespace PrivateSchool
     {
         static void Main(string[] args)
         {
-
-            int noOfCourses = 500;
-            Stream stream = new Stream(0, 2, 2);
-            CourseDateDetails CourseDateDetails = new CourseDateDetails(new DateTime(2020/3/23), new DateTime(2019/4/23));
-            CourseDetails courseDetails = new CourseDetails("JaVa", stream, "full time", CourseDateDetails);
-
-            FullName fullName = new FullName("Spyros", "Tomaras");
-            StudentDetails studentDetails = new StudentDetails(fullName, new DateTime(1997, 11, 01), 300);
-            RandomStudent randomStudent = new RandomStudent(studentDetails);
-            Console.WriteLine(randomStudent.ToString());
-
-            School school = new School(courseDetails, noOfCourses);
+            int noOfStudents = 30;
+            MinMax Id =  new MinMax(1, 100);
+            MinMax TuitionFees = new MinMax(900.00, 7900.00);
+            NameMinMax FirstName = new NameMinMax(65, 91, 4);
+            NameMinMax LastName = new NameMinMax(65, 91, 6);
+            DateBirth DateBirth = new DateBirth(1982, 2005, 3, 8, 5, 23);
+            StudentDetails studentDetails = new StudentDetails(Id, FirstName, LastName, DateBirth, TuitionFees);
+            RandomStudent random = new RandomStudent(studentDetails);
+            Console.WriteLine(random.ToString());
+            School school = new School(studentDetails, noOfStudents);
             school.Start();
 
             

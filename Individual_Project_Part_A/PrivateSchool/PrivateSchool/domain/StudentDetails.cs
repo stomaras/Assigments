@@ -4,79 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace PrivateSchool.domain
 {
     class StudentDetails
     {
-        string[] firstNames = new string[] { "spyros", "kostas", "chris", "zarma", "mitsos", "natalia", "anna", "agathi" };
-        string[] lastNames = new string[] { "tomaras", "fragulis", "oikonomidis", "kanoulas", "karaulanis", "kallifonis", "papanikolaou", "papagiani" };
-        private FullName _fullName;
+        private MinMax _id;
 
-        public FullName FullName
+        public MinMax Id
         {
-            get { return _fullName; }
-            set { _fullName = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
+        private NameMinMax _firstName;
 
-        private DateTime _dateOfBirth;
+        public NameMinMax FirstName
+        {
+            get { return _firstName; }
+            set { _firstName = value; }
+        }
 
-        public DateTime DateOfBirth
+        private NameMinMax _lastName;
+
+        public NameMinMax LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
+
+        private DateBirth _dateOfBirth;
+
+        public DateBirth DateOfBirth
         {
             get { return _dateOfBirth; }
             set { _dateOfBirth = value; }
         }
 
 
+        private MinMax _tuitionFees;
 
-        private double _tuitionFees;
-
-        public double TuitionFees
+        public MinMax TuitionFees
         {
             get { return _tuitionFees; }
             set { _tuitionFees = value; }
         }
 
-        public StudentDetails(FullName fullName, DateTime dateOfBirth, double tuitionFees)
+        public StudentDetails(MinMax id, NameMinMax firstName, NameMinMax lastName, DateBirth dateOfBirth, MinMax tuitionFees)
         {
-            FullName = new FullName(fullName.FirstName, fullName.LastName);
-            DateOfBirth = GenerateDateOfBirth(dateOfBirth);
-            TuitionFees = CreateTuitionFees(tuitionFees);
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            TuitionFees = tuitionFees;
         }
 
-
-        private DateTime GenerateDateOfBirth(DateTime date)
+        public override string ToString()
         {
-            DateTime dateAccept = new DateTime(2004, 1, 1);
-            if(date.Year > DateTime.Now.Year)
-            {
-                date.Subtract((DateTime.Now));
-                date.Subtract(dateAccept);
-            }
-
-            if (date.Year - DateTime.Now.Year < 18)
-            {
-                date.Subtract(dateAccept);
-            }
-            return date;
+            return $"Student Details : With min Id ";
         }
-
-        private double CreateTuitionFees(double tuitionFees)
-        {
-            if(tuitionFees < 2000)
-            {
-                tuitionFees = 2000;
-            }
-
-            return tuitionFees;
-        }
-
-
-
-
-
-
-
     }
 }
