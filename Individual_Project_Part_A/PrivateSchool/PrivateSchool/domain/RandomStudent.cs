@@ -13,7 +13,16 @@ namespace PrivateSchool.domain
         private StudentDetails _studentDetails;
 
         
+        public RandomStudent(StudentDetails studentDetails, int id)
+        {
+            _studentDetails = studentDetails;
+            Sid = id;
+            FirstName = RandomService.Name(_studentDetails.FirstName.Min, _studentDetails.FirstName.Max, _studentDetails.FirstName.Length);
+            LastName = RandomService.Name(_studentDetails.LastName.Min, _studentDetails.LastName.Max, _studentDetails.LastName.Length);
+            TuitionFees = RandomService.Number((int)_studentDetails.TuitionFees.MinTuitionFees, (int)_studentDetails.TuitionFees.MaxTuitionFees);
+            DateOfBirth = RandomService.RandomDate(_studentDetails.DateOfBirth.MinAcceptedYearInCalendar, _studentDetails.DateOfBirth.MaxAcceptedYearInCalendar, _studentDetails.DateOfBirth.MinMonth, _studentDetails.DateOfBirth.MaxMonth, _studentDetails.DateOfBirth.MinDay, _studentDetails.DateOfBirth.MaxDay);
 
+        }
 
         public RandomStudent (StudentDetails studentDetails)
         {

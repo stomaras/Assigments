@@ -69,6 +69,7 @@
     <Compile Include="services\School.cs" />
     <Compile Include="services\RandomService.cs" />
     <Compile Include="services\StudentService.cs" />
+    <Compile Include="services\StudentDataInputService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

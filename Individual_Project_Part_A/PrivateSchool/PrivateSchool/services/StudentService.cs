@@ -24,11 +24,31 @@ namespace PrivateSchool.services
         private List<Student> GenerateStudents()
         {
             List<Student> students = new List<Student>();
+            var newStudent = new RandomStudent(_studentDetails);
+            students.Add(newStudent);
 
+            var newId = 0;
 
             for(int i = 0; i < _noOfStudents; i++)
             {
-                students.Add(new RandomStudent(_studentDetails));
+                bool notFound = true;
+
+                while (notFound)
+                {
+                    newId = RandomService.Number(_studentDetails.Id.Min, _studentDetails.Id.Max);
+                    foreach(Student student in students)
+                    {
+                        if(student.Sid == newId)
+                        {
+                            break;
+                        }
+                        if(students.Last() == student)
+                        {
+                            notFound = false;
+                        }
+                    }
+                }
+                students.Add(new RandomStudent(_studentDetails, newId));
             }
             return students;
         }
