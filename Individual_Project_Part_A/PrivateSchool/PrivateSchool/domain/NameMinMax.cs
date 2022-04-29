@@ -48,7 +48,7 @@ namespace PrivateSchool.domain
 
         public override string ToString()
         {
-            return $"NameMinMax, with min ascci character {Min}, with max ascii character {Max}, number of characters {Length}";
+            return $"NameMinMax {{ with min ascci character {Min}, with max ascii character {Max}, number of characters {Length} }}";
         }
     }
 }

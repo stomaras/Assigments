@@ -41,7 +41,7 @@ namespace PrivateSchool.domain
             //string s1= StudentDetails.ToString();
             //s += s + s1;
             //return $"Student with Id {StudentDetails.Id.} with First Name { StudentDetails.FirstName}";
-            return $" Student with id: {Sid}, with first name: {FirstName}, with last name: {LastName}, with tuition fees: {TuitionFees}, with Date Of Birth {DateOfBirth}";
+            return $" Student {{ with id: {Sid}, with first name: {FirstName}, with last name: {LastName}, with tuition fees: {TuitionFees}, with Date Of Birth {DateOfBirth} }}";
         }
     }
 }

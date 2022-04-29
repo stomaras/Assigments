@@ -60,7 +60,7 @@ namespace PrivateSchool.domain
 
         public override string ToString()
         {
-            return $"Student Details : With min Id ";
+            return $"Student Details : {{ with Id {Id} with First Name {FirstName} with Last Name {LastName} with date of birth {DateOfBirth} with tuition fees {TuitionFees} }} ";
         }
     }
 }

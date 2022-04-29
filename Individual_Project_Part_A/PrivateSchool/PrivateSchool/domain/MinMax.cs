@@ -80,7 +80,7 @@ namespace PrivateSchool.domain
 
         public override string ToString()
         {
-            return $"MinMax with min Id : {Min}, with max Id : {Max}, with min tuition fees : {MinTuitionFees}, with max tuition fees : {MaxTuitionFees}"; 
+            return $"MinMax {{ with min Id : {Min}, with max Id : {Max}, with min tuition fees : {MinTuitionFees}, with max tuition fees : {MaxTuitionFees} }} "; 
         }
     }
 }

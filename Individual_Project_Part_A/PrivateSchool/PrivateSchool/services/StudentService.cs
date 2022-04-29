@@ -29,7 +29,7 @@ namespace PrivateSchool.services
 
             var newId = 0;
 
-            for(int i = 0; i < _noOfStudents; i++)
+            for(int i = 0; i < _noOfStudents - 1; i++)
             {
                 bool notFound = true;
 

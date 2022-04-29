@@ -106,7 +106,7 @@ namespace PrivateSchool.domain
 
         public override string ToString()
         {
-            return $"Date Birth Details minimum accepted year in calendar {MinAcceptedYearInCalendar} , maximum accepted year in calendar {MaxAcceptedYearInCalendar} , min Month {MinMonth} , max Month {MaxMonth} , min day {MinDay} , max day {MaxDay}";
+            return $"DateBirth {{ Details minimum accepted year in calendar {MinAcceptedYearInCalendar} , maximum accepted year in calendar {MaxAcceptedYearInCalendar} , min Month {MinMonth} , max Month {MaxMonth} , min day {MinDay} , max day {MaxDay} }}";
 ;        }
     }
 }
