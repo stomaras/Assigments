@@ -42,6 +42,24 @@ namespace PrivateSchool
             school.Start();
 
 
+            //string[] courses = { "java", "python", "csharp", "javascript" };
+
+
+
+            //Console.WriteLine(RandomService.Course(courses));
+
+            //Subject su = new Subject();
+            //Console.WriteLine(su.ToString());
+            MinMax Id = new MinMax(1, 4);
+            NameMinMax FirstName = new NameMinMax(65, 91, 4);
+            NameMinMax LastName = new NameMinMax(65, 91, 7);
+            Subject subject = new Subject();
+            TrainerDetails trainerDetails = new TrainerDetails(Id, FirstName, LastName, subject);
+            RandomTrainer trainer = new RandomTrainer(trainerDetails);
+            Console.WriteLine(trainerDetails.ToString());
+            Console.WriteLine(trainer.ToString());
+
+
 
         }
 

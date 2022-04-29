@@ -24,6 +24,8 @@ namespace PrivateSchool.services
             set { _noOfStudents = value; }
         }
 
+        
+
         public School(StudentDetails studentDetails, int noOfStudents)
         {
             StudentDetails = studentDetails;

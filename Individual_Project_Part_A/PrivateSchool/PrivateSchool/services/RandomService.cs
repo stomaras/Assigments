@@ -9,6 +9,7 @@ namespace PrivateSchool.services
     class RandomService
     {
         private static Random _rand = new Random((int)DateTime.Now.Ticks);
+        
         public static int Number(int min, int max)
         {
             int result = 0;
@@ -32,6 +33,14 @@ namespace PrivateSchool.services
             return randomDateTime;
         }
 
+        public static string Course(string[] courses)
+        {
+            string result = "";
+            int rand_index = _rand.Next(0, courses.Length);
+            result = courses[rand_index];
+            return result;
+            
+        }
         
         public static string Name(int min, int max, int noOfChars)
         {
