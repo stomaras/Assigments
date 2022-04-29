@@ -50,14 +50,21 @@ namespace PrivateSchool
 
             //Subject su = new Subject();
             //Console.WriteLine(su.ToString());
-            MinMax Id = new MinMax(1, 4);
+
+            // List With Trainers 1st Way
+            MinMax Id = new MinMax(1, 20);
             NameMinMax FirstName = new NameMinMax(65, 91, 4);
             NameMinMax LastName = new NameMinMax(65, 91, 7);
             Subject subject = new Subject();
             TrainerDetails trainerDetails = new TrainerDetails(Id, FirstName, LastName, subject);
             RandomTrainer trainer = new RandomTrainer(trainerDetails);
-            Console.WriteLine(trainerDetails.ToString());
-            Console.WriteLine(trainer.ToString());
+            int noOfTrainers = 10;
+            School school1 = new School(trainerDetails, noOfTrainers);
+            school1.StartTrainers();
+
+
+
+
 
 
 

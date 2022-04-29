@@ -28,6 +28,15 @@ namespace PrivateSchool.domain
             Subject = RandomService.Course(_trainerDetails.Subject.Courses);
         }
 
+        public RandomTrainer(TrainerDetails trainerDetails, int Id)
+        {
+            _trainerDetails = trainerDetails;
+            Tid = Id;
+            FirstName = RandomService.Name(_trainerDetails.FirstName.Min, _trainerDetails.FirstName.Max, _trainerDetails.FirstName.Length);
+            LastName = RandomService.Name(_trainerDetails.LastName.Min, _trainerDetails.LastName.Max, _trainerDetails.LastName.Length);
+            Subject = RandomService.Course(_trainerDetails.Subject.Courses);
+        }
+
 
         public override string ToString()
         {
